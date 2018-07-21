@@ -35,4 +35,4 @@ configProperties:
 
 template: Hello, %s!
 defaultName: Stranger
-enviroment: Development
+enviroment: Local Development

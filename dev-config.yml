@@ -35,41 +35,4 @@ configProperties:
 
 template: Hello, %s!
 defaultName: Stranger
-enviroment: Developmentserver:
-  rootPath: /api
-  applicationConnectors:
-    - type: http
-      port: 8080
-  adminConnectors:
-    - type: http
-      port: 8081
-
-assets:
-  overrides:
-    /: externalwebapp/dist
-
-logging:
-  level: INFO
-  loggers:
-    com.indexnine.gyan: INFO
-    org.hibernate:
-      level: WARN
-
-  appenders:
-    - type: console
-    - type: file
-      threshold: INFO
-      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
-      currentLogFilename: /tmp/application.log
-      archivedLogFilenamePattern: /tmp/application-%d{yyyy-MM-dd}-%i.log.gz
-      archivedFileCount: 7
-      timeZone: UTC
-      maxFileSize: 10MB
-
-configProperties:
-  myProperty: Sample Property
-
-
-template: Hello, %s!
-defaultName: Stranger
 enviroment: Development
